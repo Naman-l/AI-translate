@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
 import { Route, Routes, Navigate } from "react-router-dom";
-import Translate from "./pages/translate";
+import Translate from "./pages/Translate";
 import ContactUs from "./pages/ContactUs";
 
 function App() {

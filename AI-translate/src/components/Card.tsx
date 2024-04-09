@@ -7,17 +7,28 @@ function Card({cardInfo}) {
 
 
   return (
-    <Box sx={{
-        background:'gray',
+    <Box 
+      sx={{
+        background:'#ede8ff',
         color:'#000',
-        boxShadow:"4px 1px 1px blue",
+        boxShadow:"4px 1px 1px #f6f6f6",
         margin:'16px',
-        padding:'8px'
+        padding:'24px',
+        borderRadius: '5px',
+        width: '250px',
+        height: '200px'
     
-      }}>
-        <Typography>{title}</Typography>
-        <img src={img}/>
-        <Box><Typography>{desc}</Typography></Box>
+      }}
+      >
+        <img 
+          style={{
+          width: '100px',
+          marginBottom: '10px'
+          }} 
+          src={img}
+        />
+        <Typography  variant='h6' component="h6">{title}</Typography>
+        <Box><Typography sx={{fontSize: 12, color: '#474750'}}>{desc}</Typography></Box>
       
     </Box>
   )
