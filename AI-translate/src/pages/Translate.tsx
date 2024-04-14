@@ -5,7 +5,27 @@ import Header from '../components/Header'
 export default function Translate() {
   return (
     <Box>
-        <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+        <Box
+        sx={{
+          position: 'fixed',
+          top: 0,
+          zIndex: -10,
+          height: '100vh',
+          width: '100vw',
+        }}
+      >
+        <Box
+            sx={{
+              position: 'absolute',
+              top: 0,
+              zIndex: -2,
+              height: '100vh',
+              width: '100vw',
+              backgroundColor: 'white',
+              backgroundImage: 'radial-gradient(ellipse at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0))',
+            }}
+            />
+        </Box>
         <Header/>
       
     </Box>
