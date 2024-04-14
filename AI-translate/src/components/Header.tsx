@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { Box, Typography, useMediaQuery, IconButton, Drawer, List, ListItem, ListItemText } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import {useTheme} from '@mui/material';
-import {ThemeProvider} from '@mui/styles';
 import { useNavigate } from "react-router-dom";
 import logo from '../assets/logo.svg';
 
 const Header = () => {
   const navigate = useNavigate();
-  const theme = useTheme()
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery('(max-width:768px)');
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const buttons = [
@@ -74,7 +72,7 @@ const Header = () => {
           <IconButton
             aria-label="menu"
             onClick={toggleDrawer(true)}
-            sx={{ padding: 0 }}
+            sx={{ padding: 0, marginRight: '30px' }}
           >
             <MenuIcon />
           </IconButton>
@@ -107,6 +105,7 @@ const Header = () => {
           sx={{
             display: 'flex',
             alignItems: 'center',
+            marginRight: '30px'
           }}
         >
           {buttons.map((button, index) => {

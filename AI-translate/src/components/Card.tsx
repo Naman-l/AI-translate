@@ -11,7 +11,7 @@ function Card({cardInfo}) {
       sx={{
         background:'#ede8ff',
         color:'#000',
-        boxShadow:"4px 1px 1px #f6f6f6",
+        // boxShadow:"4px 1px 1px grey",
         margin:'16px',
         padding:'24px',
         borderRadius: '5px',
